@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vintage Letter Page</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Full-page soft textured background */
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #3a2a1a;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(0,0,0,0.08), transparent 55%),
+        linear-gradient(135deg, #f5e7d5, #e6d2b5);
+    }
+
+    /* Vintage letter banner */
+    .letter-container {
+      max-width: 800px;
+      width: 90%;
+      padding: 40px 50px;
+      background: #fdf7e9;
+      border-radius: 12px;
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.4),
+        inset 0 0 40px rgba(0, 0, 0, 0.10);
+      border: 1px solid rgba(120, 90, 50, 0.35);
+      position: relative;
+    }
+
+    /* Subtle vintage edges */
+    .letter-container::before,
+    .letter-container::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 8px;
+      border: 1px dashed rgba(120, 90, 50, 0.35);
+      pointer-events: none;
+    }
+
+    .letter-container::after {
+      inset: 26px 18px;
+      border-style: dotted;
+      opacity: 0.6;
+    }
+
+    /* Header / title */
+    .letter-title {
+      text-align: center;
+      font-size: 1.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: #4a3623;
+    }
+
+    .letter-title span {
+      display: inline-block;
+      padding: 6px 20px;
+      border-top: 1px solid rgba(90, 60, 30, 0.65);
+      border-bottom: 1px solid rgba(90, 60, 30, 0.65);
+    }
+
+    /* Static letter body (no input) */
+    .letter-body-static {
+      position: relative;
+      padding-top: 10px;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #3a2a1a;
+      min-height: 320px;
+      /* faint horizontal lines like writing paper */
+      background-image: linear-gradient(
+        to bottom,
+        rgba(150, 120, 80, 0.25) 1px,
+        transparent 1px
+      );
+      background-size: 100% 28px;
+      white-space: pre-wrap; /* preserve line breaks */
+    }
+
+    /* Optional small footer line */
+    .letter-footer {
+      margin-top: 18px;
+      text-align: right;
+      font-size: 0.85rem;
+      color: rgba(80, 60, 40, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="letter-container">
+    <h1 class="letter-title">
+      <span>Vintage Letter</span>
+    </h1>
+
+    <!-- Static, written letter instead of textarea -->
+    <div class="letter-body-static">
+Date: 19 November 2025
+
+Dear Friend,
+
+After several contemplations and thinking, i regret to inform you that i have come to this conclusion that,
+
+Debjit lag tho hai!
+
+With warm regards,
+
+Aniket
+    </div>
+
+    <div class="letter-footer">
+      
+    </div>
+  </div>
+</body>
+</html>
